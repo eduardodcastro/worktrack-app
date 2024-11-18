@@ -1,0 +1,141 @@
+import { Platform, StyleSheet } from "react-native";
+
+import { colors } from "../../config/colors";
+import { dimensions, dimensionsHeight } from "../../config/getDimensions";
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.coral,
+  },
+  containerLogo: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingTop: 10,
+    alignItems: "center",
+  },
+  permissionCameraArea: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: dimensions(4),
+  },
+  permissionCameraAreaTxt: {
+    color: colors.ivory,
+    fontSize: 16,
+    textAlign: "center",
+    fontWeight: "500",
+  },
+  permissionCameraButton: {
+    backgroundColor: colors.tealGreen,
+    paddingHorizontal: 18,
+    paddingVertical: 14,
+    borderRadius: 8,
+    borderColor: colors.ivory,
+    borderWidth: 2,
+    marginTop: 16,
+  },
+  permissionCameraButtonTxt: {
+    color: colors.mistyBlue,
+    textTransform: "uppercase",
+    fontWeight: "600",
+  },
+  camera: {
+    flex: 1,
+    marginVertical: dimensions(45),
+    marginHorizontal: dimensionsHeight(5),
+  },
+  iconCamera: {
+    position: "absolute",
+    top: Platform.OS === "ios" ? dimensionsHeight(31) : dimensionsHeight(30),
+    left: dimensions(11),
+    zIndex: 9,
+  },
+  txtCameraOpen: {
+    position: "absolute",
+    top: Platform.OS === "ios" ? dimensionsHeight(24) : dimensionsHeight(22),
+    left: dimensions(11),
+    zIndex: 9,
+    color: colors.ivory,
+    width: dimensions(78),
+    fontWeight: "500",
+    lineHeight: 22,
+  },
+  containerToScanAgain: {
+    position: "absolute",
+    top: Platform.OS === "ios" ? dimensionsHeight(68) : dimensionsHeight(72),
+    width: dimensions(100),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  containerOpenCamera: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  containerInstructions: {
+    paddingHorizontal: dimensions(5),
+    borderWidth: 2,
+    borderColor: colors.ivory,
+    paddingVertical: dimensionsHeight(4),
+    borderRadius: 8,
+    marginHorizontal: dimensions(8),
+    backgroundColor: colors.ivory,
+  },
+  instructionsText: {
+    color: colors.coral,
+    fontWeight: "500",
+    lineHeight: 22,
+    fontSize: Platform.OS === "ios" ? 13 : 14,
+    textAlign: "justify",
+  },
+  instructionsTextMT: {
+    marginTop: 18,
+  },
+  containerOpenCameraButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 32,
+  },
+  openCameraButton: {
+    backgroundColor: colors.tealGreen,
+    paddingHorizontal: 18,
+    paddingVertical: 14,
+    borderRadius: 8,
+    borderColor: colors.ivory,
+    borderWidth: 2,
+    marginTop: 16,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 150,
+    height: 120,
+  },
+  openCameraButtonTxt: {
+    color: colors.mistyBlue,
+    textTransform: "uppercase",
+    fontWeight: "600",
+    marginTop: 14,
+    fontSize: 14,
+    textAlign: "center",
+  },
+  openCameraButtonTxtSmall: {
+    fontSize: 12,
+  },
+  containerLinkedUser: {
+    backgroundColor: colors.ivory,
+    paddingHorizontal: 18,
+    paddingVertical: 14,
+    borderRadius: 8,
+    borderColor: colors.tealGreen,
+    borderWidth: 2,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 150,
+    height: 120,
+  },
+  linkedUserTxt: {
+    fontWeight: "600",
+    color: colors.tealGreen,
+    fontSize: 14,
+  },
+});
